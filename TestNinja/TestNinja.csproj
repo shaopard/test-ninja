@@ -44,6 +44,9 @@
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -62,10 +65,15 @@
     <Compile Include="Fundamentals\Stack.cs" />
     <Compile Include="Mocking\BookingHelper.cs" />
     <Compile Include="Mocking\EmployeeController.cs" />
+    <Compile Include="Mocking\FileReader.cs" />
+    <Compile Include="Mocking\IFileReader.cs" />
     <Compile Include="Mocking\InstallerHelper.cs" />
     <Compile Include="Mocking\OrderService.cs" />
     <Compile Include="Mocking\Product.cs" />
+    <Compile Include="Mocking\Program.cs" />
+    <Compile Include="Mocking\VideoRepository.cs" />
     <Compile Include="Mocking\VideoService.cs" />
+    <Compile Include="NinjectBinings\Bindings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,8 +6,6 @@ namespace TestNinja.UnitTests
     [TestFixture]
     public class FizzBuzzTests
     {
-        private FizzBuzz _fizzBuzz;
-
         [Test]
         [TestCase(0, "FizzBuzz")]
         [TestCase(1, "1")]
