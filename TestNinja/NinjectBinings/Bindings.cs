@@ -9,6 +9,7 @@ namespace TestNinja.NinjectBinings
         {
             Bind<IFileReader>().To<FileReader>();
             Bind<IVideoRepository>().To<VideoRepository>();
+            Bind<IEmployeeRepository>().To<EmployeeRepository>();
         }
     }
 }

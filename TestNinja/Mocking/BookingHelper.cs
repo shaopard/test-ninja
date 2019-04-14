@@ -14,8 +14,7 @@ namespace TestNinja.Mocking
             var unitOfWork = new UnitOfWork();
             var bookings =
                 unitOfWork.Query<Booking>()
-                    .Where(
-                        b => b.Id != booking.Id && b.Status != "Cancelled");
+                    .Where(b => b.Id != booking.Id && b.Status != "Cancelled");
 
             var overlappingBooking =
                 bookings.FirstOrDefault(
