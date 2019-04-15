@@ -10,6 +10,10 @@ namespace TestNinja.NinjectBinings
             Bind<IFileReader>().To<FileReader>();
             Bind<IVideoRepository>().To<VideoRepository>();
             Bind<IEmployeeRepository>().To<EmployeeRepository>();
+            Bind<IBookingRepository>().To<BookingRepository>();
+            Bind<IUnitOfWork>().To<UnitOfWork>();
+            Bind<IStatementGenerator>().To<StatementGenerator>();
+            Bind<IEmailHandler>().To<EmailHandler>();
         }
     }
 }
