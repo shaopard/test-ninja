@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConceptClasses\ClassicRecursionTests.cs" />
     <Compile Include="CustomerControllerTests.cs" />
     <Compile Include="DemeritPointsCalculatorTests.cs" />
     <Compile Include="ErrorLoggerTests.cs" />

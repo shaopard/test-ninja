@@ -53,6 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ConceptClasses\ClassicRecursion.cs" />
     <Compile Include="Fundamentals\CustomerController.cs" />
     <Compile Include="Fundamentals\DateHelper.cs" />
     <Compile Include="Fundamentals\DemeritPointsCalculator.cs" />
