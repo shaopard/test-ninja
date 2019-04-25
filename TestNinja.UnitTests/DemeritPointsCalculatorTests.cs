@@ -19,9 +19,6 @@ namespace TestNinja.UnitTests
         {
             Assert.ThrowsException<ArgumentOutOfRangeException>(
                 () => _demeritPointsCalculator.CalculateDemeritPoints(outOfRangeSpeed));
-
-            //Assert.That(() => _demeritPointsCalculator.CalculateDemeritPoints(outOfRangeSpeed), 
-            //    Throws.Exception.TypeOf<ArgumentOutOfRangeException>());
         }
 
         [TestMethod]
@@ -37,8 +34,6 @@ namespace TestNinja.UnitTests
             var result = _demeritPointsCalculator.CalculateDemeritPoints(outOfRangeSpeed);
 
             Assert.AreEqual(result, expectedResult);
-
-            //Assert.That(result, Is.EqualTo(expectedResult));
         }
     }
 }
