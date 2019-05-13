@@ -4,7 +4,7 @@ namespace TestNinja.Mocking
 {
     public class InstallerHelper
     {
-        private string _setupDestinationFile;
+        private string _setupDestinationFile = string.Empty;
         private IFileDownloader _fileDownloader;
 
         public InstallerHelper(IFileDownloader fileDownloader)

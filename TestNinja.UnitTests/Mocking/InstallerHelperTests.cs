@@ -23,13 +23,14 @@ namespace TestNinja.UnitTests.Mocking
         {
             // la setup in situatii de aruncat exceptii, parametrii trebuie sa fie perfect potriviti cu parametrii cu care se apeleaza metoda
             // daca nu se intampla asta, nu se va executa nimic
-            //_fileDownloader.Setup(downloader => downloader.DownloadFile($"http://example.com/customer/installer", null)).Throws<WebException>();
+            // exemplu care nu va executa nimic
+            // _fileDownloader.Setup(downloader => downloader.DownloadFile($"http://example.com/customer/installer", null)).Throws<WebException>();
 
             _fileDownloader.Setup(downloader => 
                 downloader.DownloadFile(It.IsAny<string>(), It.IsAny<string>()))
                 .Throws<WebException>();
 
-            var result =_installerHelper.DownloadInstaller("customer", "installer");
+            bool result =_installerHelper.DownloadInstaller("customer", "installer");
 
             Assert.That(result, Is.EqualTo(false));
         }
@@ -37,11 +38,12 @@ namespace TestNinja.UnitTests.Mocking
         [Test]
         public void DownloadInstaller_DownloadSucceeds_ReturnTrue()
         {
-            _fileDownloader.Setup(downloader => downloader.DownloadFile(It.IsAny<string>(), It.IsAny<string>())).Throws<WebException>();
+            //_fileDownloader.Verify(downloader =>
+            //                           downloader.DownloadFile(It.IsAny<string>(), It.IsAny<string>()));
 
-            var result = _installerHelper.DownloadInstaller("customer", "installer");
+            bool result = _installerHelper.DownloadInstaller(It.IsAny<string>(), It.IsAny<string>());
 
-            Assert.That(result, Is.EqualTo(false));
+            Assert.That(result, Is.EqualTo(true));
         }
     }
 }
