@@ -43,7 +43,7 @@ namespace TestNinja.UnitTests.Mocking
 
             _unitOfWork.Setup(uow => uow.Query<Housekeeper>()).Returns(new List<Housekeeper>
             {
-                _houseKeeper,
+                _houseKeeper
             }.AsQueryable());
         }
 
